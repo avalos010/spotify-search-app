@@ -22,6 +22,6 @@ app.post('/search', (req,res) => {
     .then(data => res.json(data.tracks.items))
 });
 
-app.listen(3050, () => {
+app.listen(process.env.PORT||3050, () => {
     console.log('port up and running');
 })
