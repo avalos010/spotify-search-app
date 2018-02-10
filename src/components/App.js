@@ -12,7 +12,7 @@ class App extends Component {
 search = (e) => {
     e.preventDefault();
     this.setState({term: e.target[0].value})
-    fetch('http://localhost:3050/search', {
+    fetch('https://spotify-backend-api.herokuapp.com/search', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
