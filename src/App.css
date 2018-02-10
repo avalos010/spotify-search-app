@@ -11,9 +11,9 @@ body {
   text-align: center;
 }
 
-h1 {
+h1 , h3{
   color:#84bd00;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 2px 2px rgb(255, 255, 255);
 }
 .form-input {
   display: flex;
@@ -52,17 +52,56 @@ ul {
 ul li img {
   width: 40%;
 }
-
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+ text-shadow: 2px 2px 1px #000;
+}
 ul audio {
   margin-top: .5em;
 }
 
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: #fff;
+  background: #84bd00;
+  position: fixed;
+  bottom: 0;
+  text-shadow: 1px 1px 1px #000;
+
+}
+
+footer a{
+  text-decoration: none;
+  color: #000;
+  text-shadow:1px 1px 1px #fff;
+}
+
 @media screen and (min-width: 800px) {
+  body {
+    background: url('./blah.gif');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   ul li img {
     width: 25%;
   }
 
   .form-input {
     display: inline;
+  }
+
+  ul {
+    flex-direction: row;
+    flex-wrap: wrap
+  }
+
+  ul li a {
+    text-shadow: 2px 2px 1px #84bd00;
   }
 }
