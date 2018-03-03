@@ -9,6 +9,11 @@ class App extends Component {
     data: {},
     term: ''
   }
+
+//To wake up backend
+componentWillMount = () => {
+  fetch('https://spotify-backend-api.herokuapp.com/');
+}
 search = (e) => {
     e.preventDefault();
     this.setState({term: e.target[0].value})
