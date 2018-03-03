@@ -14,7 +14,7 @@ class App extends Component {
 componentWillMount = () => {
   fetch('https://spotify-backend-api.herokuapp.com/', {
         method: 'GET'
-  }).then(res => console.log(res))
+  }).then(res => res)
 }
 search = (e) => {
     e.preventDefault();
