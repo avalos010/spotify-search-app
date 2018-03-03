@@ -12,7 +12,9 @@ class App extends Component {
 
 //To wake up backend
 componentWillMount = () => {
-  fetch('https://spotify-backend-api.herokuapp.com/');
+  fetch('https://spotify-backend-api.herokuapp.com/', {
+        method: 'GET'
+  }).then(res => console.log(res))
 }
 search = (e) => {
     e.preventDefault();
