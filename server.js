@@ -10,7 +10,7 @@ let spotify = new Spotify({
     secret: secret.secret
 })
 
-app.use(bodyParser());
+app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
