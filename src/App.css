@@ -1,9 +1,11 @@
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background:linear-gradient( #d3e2d0, #fff) no-repeat;
+  background: linear-gradient(#d3e2d0, #fff) no-repeat;
 
 }
 
@@ -11,31 +13,64 @@ body {
   text-align: center;
 }
 
-h1 , h3{
-  color:#84bd00;
+h1,
+h3 {
+  color: #84bd00;
   text-shadow: 2px 2px 2px rgb(255, 255, 255);
 }
-.form-input {
+
+.intro {
+  height: 500px;
+  background-image: url('./imgs/bg-intro.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  padding: 2em;
-  border-bottom: 1px solid #fff
-  
-}
-.form-input input {
-  height: 3em;
-  outline: none;
-  border-radius: 5px;
-  margin: .5em;
+  box-shadow: 0 5px 5px #84bd00;
 }
 
-.form-input input[type="submit"] {
-    background: #84bd00;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.1em;
+.form-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2em;
 }
+
+.form-input input {
+  height: 3em;
+  margin-top: 55px;
+  outline: none;
+  transition: .5s all;
+  align-self: center;
+  border: none;
+}
+
+.form-input input:focus {
+  border-radius: 20px;
+}
+
+.form-input input:focus~input[type="submit"] {
+  visibility: visible;
+}
+
+
+
+
+input[type="submit"] {
+  background: #84bd00;
+  visibility: hidden;
+  transition: all .4s;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  height: 59px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 15px;
+}
+
 .form-input input[type="text"] {
   font-size: 1.2em;
   text-align: center;
@@ -52,12 +87,14 @@ ul {
 ul li img {
   width: 40%;
 }
+
 ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.2em;
- text-shadow: 2px 2px 1px #000;
+  text-shadow: 2px 2px 1px #000;
 }
+
 ul audio {
   margin-top: .5em;
 }
@@ -74,22 +111,17 @@ footer {
 
 }
 
-footer a{
+footer a {
   text-decoration: none;
   color: #000;
-  text-shadow:1px 1px 1px #fff;
+  text-shadow: 1px 1px 1px #fff;
 }
 
 @media screen and (min-width: 800px) {
   body {
-    background: url('./blah.gif');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  ul li img {
-    width: 25%;
   }
 
   .form-input {
@@ -98,10 +130,15 @@ footer a{
 
   ul {
     flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap
   }
 
   ul li a {
     text-shadow: 2px 2px 1px #84bd00;
   }
+}
+
+.song_img {
+  width: 250px;
 }
