@@ -13,16 +13,19 @@ let spotify = new Spotify({
 app.use(bodyParser());
 app.use(cors());
 
-app.get('/',(req,res) => {
+app.get('/', (req, res) => {
     res.send('Server up and Running');
 });
 
 
-app.post('/search', (req,res) => {
-    req.body && spotify.search({type: 'track', query: req.body.term})
-    .then(data => res.json(data.tracks.items))
+app.post('/search', (req, res) => {
+    req.body && spotify.search({
+            type: 'track',
+            query: req.body.term
+        })
+        .then(data => res.json(data.tracks.items))
 });
 
-app.listen(process.env.PORT||3050, () => {
+app.listen(process.env.PORT || 3050, () => {
     console.log('port up and running');
 });
